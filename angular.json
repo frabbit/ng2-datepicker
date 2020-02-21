@@ -117,6 +117,26 @@
           }
         }
       }
+    },
+    "lib": {
+      "projectType": "library",
+      "root": "src/ng-datepicker",
+      "sourceRoot": "src/ng-datepicker",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "src/ng-datepicker/tsconfig.lib.json",
+            "project": "src/ng-datepicker/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "src/ng-datepicker/tsconfig.lib.prod.json"
+            }
+          }
+        }
+      }
     }
   },
   "defaultProject": "ng2-datepicker",
